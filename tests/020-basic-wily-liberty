@@ -1,0 +1,9 @@
+#!/usr/bin/python
+
+"""Amulet tests on a basic rabbitmq-server deployment on wily-liberty."""
+
+from basic_deployment import RmqBasicDeployment
+
+if __name__ == '__main__':
+    deployment = RmqBasicDeployment(series='wily')
+    deployment.run_tests()

@@ -1,0 +1,11 @@
+#!/usr/bin/python
+
+"""Amulet tests on a basic rabbitmq-server deployment on precise-icehouse."""
+
+from basic_deployment import RmqBasicDeployment
+
+if __name__ == '__main__':
+    deployment = RmqBasicDeployment(series='precise',
+                                    openstack='cloud:precise-icehouse',
+                                    source='cloud:precise-updates/icehouse')
+    deployment.run_tests()

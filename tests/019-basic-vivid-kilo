@@ -1,0 +1,9 @@
+#!/usr/bin/python
+
+"""Amulet tests on a basic rabbitmq-server deployment on vivid-kilo."""
+
+from basic_deployment import RmqBasicDeployment
+
+if __name__ == '__main__':
+    deployment = RmqBasicDeployment(series='vivid')
+    deployment.run_tests()

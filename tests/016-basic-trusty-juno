@@ -1,0 +1,11 @@
+#!/usr/bin/python
+
+"""Amulet tests on a basic rabbitmq-server deployment on trusty-juno."""
+
+from basic_deployment import RmqBasicDeployment
+
+if __name__ == '__main__':
+    deployment = RmqBasicDeployment(series='trusty',
+                                    openstack='cloud:trusty-juno',
+                                    source='cloud:trusty-updates/juno')
+    deployment.run_tests()
